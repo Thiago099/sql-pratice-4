@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `object` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela meaning.object: ~7 rows (aproximadamente)
+-- Copiando dados para a tabela meaning.object: ~10 rows (aproximadamente)
 /*!40000 ALTER TABLE `object` DISABLE KEYS */;
 INSERT INTO `object` (`id`) VALUES
 	(1);
@@ -65,8 +65,6 @@ INSERT INTO `object` (`id`) VALUES
 INSERT INTO `object` (`id`) VALUES
 	(9);
 INSERT INTO `object` (`id`) VALUES
-	(10);
-INSERT INTO `object` (`id`) VALUES
 	(11);
 /*!40000 ALTER TABLE `object` ENABLE KEYS */;
 
@@ -85,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `object_correlation` (
   CONSTRAINT `FK_object_correlation_object_2` FOREIGN KEY (`id_object_to`) REFERENCES `object` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela meaning.object_correlation: ~7 rows (aproximadamente)
+-- Copiando dados para a tabela meaning.object_correlation: ~10 rows (aproximadamente)
 /*!40000 ALTER TABLE `object_correlation` DISABLE KEYS */;
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
 	(2, 1, 2, 1);
@@ -104,7 +102,7 @@ INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_co
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
 	(18, 9, 11, 2);
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
-	(19, 11, 10, 3);
+	(19, 11, 7, 3);
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
 	(21, 8, 11, 5);
 /*!40000 ALTER TABLE `object_correlation` ENABLE KEYS */;
@@ -119,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `object_name` (
   CONSTRAINT `FK__object` FOREIGN KEY (`id_object`) REFERENCES `object` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela meaning.object_name: ~4 rows (aproximadamente)
+-- Copiando dados para a tabela meaning.object_name: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `object_name` DISABLE KEYS */;
 INSERT INTO `object_name` (`id`, `id_object`, `name`) VALUES
 	(2, 2, 'hot');
@@ -131,8 +129,6 @@ INSERT INTO `object_name` (`id`, `id_object`, `name`) VALUES
 	(5, 6, 'hands');
 INSERT INTO `object_name` (`id`, `id_object`, `name`) VALUES
 	(6, 9, 'hurt');
-INSERT INTO `object_name` (`id`, `id_object`, `name`) VALUES
-	(7, 10, 'self');
 /*!40000 ALTER TABLE `object_name` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
