@@ -76,6 +76,34 @@ INSERT INTO `object` (`id`) VALUES
 	(12);
 /*!40000 ALTER TABLE `object` ENABLE KEYS */;
 
+-- Copiando estrutura para tabela meaning.object_color
+CREATE TABLE IF NOT EXISTS `object_color` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_object` int(11) DEFAULT NULL,
+  `value` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_object_color_object` (`id_object`),
+  CONSTRAINT `FK_object_color_object` FOREIGN KEY (`id_object`) REFERENCES `object` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+
+-- Copiando dados para a tabela meaning.object_color: ~1 rows (aproximadamente)
+/*!40000 ALTER TABLE `object_color` DISABLE KEYS */;
+INSERT INTO `object_color` (`id`, `id_object`, `value`) VALUES
+	(2, 2, '#faa');
+INSERT INTO `object_color` (`id`, `id_object`, `value`) VALUES
+	(3, 6, '#afa');
+INSERT INTO `object_color` (`id`, `id_object`, `value`) VALUES
+	(4, 10, '#aff');
+INSERT INTO `object_color` (`id`, `id_object`, `value`) VALUES
+	(5, 5, '#ffa');
+INSERT INTO `object_color` (`id`, `id_object`, `value`) VALUES
+	(6, 3, '#faf');
+INSERT INTO `object_color` (`id`, `id_object`, `value`) VALUES
+	(7, 11, '#acf');
+INSERT INTO `object_color` (`id`, `id_object`, `value`) VALUES
+	(8, 9, '#ccc');
+/*!40000 ALTER TABLE `object_color` ENABLE KEYS */;
+
 -- Copiando estrutura para tabela meaning.object_correlation
 CREATE TABLE IF NOT EXISTS `object_correlation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -89,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `object_correlation` (
   CONSTRAINT `FK_object_correlation_correlation` FOREIGN KEY (`id_correlation`) REFERENCES `correlation` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_object_correlation_object` FOREIGN KEY (`id_object_from`) REFERENCES `object` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_object_correlation_object_2` FOREIGN KEY (`id_object_to`) REFERENCES `object` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4;
 
 -- Copiando dados para a tabela meaning.object_correlation: ~11 rows (aproximadamente)
 /*!40000 ALTER TABLE `object_correlation` DISABLE KEYS */;
@@ -110,11 +138,23 @@ INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_co
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
 	(22, 10, 1, 2);
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
-	(27, 7, 8, 1);
+	(27, 7, 5, 1);
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
 	(28, 4, 7, 7);
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
 	(29, 8, 1, 7);
+INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
+	(32, 11, 12, 2);
+INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
+	(33, 12, 7, 3);
+INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
+	(34, 8, 12, 5);
+INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
+	(35, 12, 1, 7);
+INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
+	(37, 7, 11, 1);
+INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
+	(39, 12, 9, 5);
 /*!40000 ALTER TABLE `object_correlation` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela meaning.object_name
@@ -125,9 +165,9 @@ CREATE TABLE IF NOT EXISTS `object_name` (
   PRIMARY KEY (`id`),
   KEY `FK__object` (`id_object`),
   CONSTRAINT `FK__object` FOREIGN KEY (`id_object`) REFERENCES `object` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela meaning.object_name: ~7 rows (aproximadamente)
+-- Copiando dados para a tabela meaning.object_name: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `object_name` DISABLE KEYS */;
 INSERT INTO `object_name` (`id`, `id_object`, `name`) VALUES
 	(2, 2, 'hot');
@@ -138,11 +178,11 @@ INSERT INTO `object_name` (`id`, `id_object`, `name`) VALUES
 INSERT INTO `object_name` (`id`, `id_object`, `name`) VALUES
 	(5, 6, 'self');
 INSERT INTO `object_name` (`id`, `id_object`, `name`) VALUES
-	(6, 9, 'hurt');
-INSERT INTO `object_name` (`id`, `id_object`, `name`) VALUES
 	(8, 10, 'something');
 INSERT INTO `object_name` (`id`, `id_object`, `name`) VALUES
-	(9, 12, 'hands');
+	(10, 11, 'hurt');
+INSERT INTO `object_name` (`id`, `id_object`, `name`) VALUES
+	(11, 9, 'bad');
 /*!40000 ALTER TABLE `object_name` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
