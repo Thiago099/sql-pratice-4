@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `object` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela meaning.object: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela meaning.object: ~9 rows (aproximadamente)
 /*!40000 ALTER TABLE `object` DISABLE KEYS */;
 INSERT INTO `object` (`id`, `name`, `color`) VALUES
 	(1, 'good', '#cfc');
@@ -66,10 +66,6 @@ INSERT INTO `object` (`id`, `name`, `color`) VALUES
 	(6, NULL, NULL);
 INSERT INTO `object` (`id`, `name`, `color`) VALUES
 	(7, NULL, NULL);
-INSERT INTO `object` (`id`, `name`, `color`) VALUES
-	(8, NULL, NULL);
-INSERT INTO `object` (`id`, `name`, `color`) VALUES
-	(9, NULL, NULL);
 /*!40000 ALTER TABLE `object` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela meaning.object_correlation
@@ -87,20 +83,16 @@ CREATE TABLE IF NOT EXISTS `object_correlation` (
   CONSTRAINT `FK_object_correlation_object_2` FOREIGN KEY (`id_object_to`) REFERENCES `object` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela meaning.object_correlation: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela meaning.object_correlation: ~8 rows (aproximadamente)
 /*!40000 ALTER TABLE `object_correlation` DISABLE KEYS */;
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
 	(2, 5, 6, 2);
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
 	(3, 5, 7, 2);
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
-	(4, 3, 8, 2);
+	(6, 6, 3, 3);
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
-	(5, 4, 9, 2);
-INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
-	(6, 6, 8, 3);
-INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
-	(7, 7, 9, 3);
+	(7, 7, 4, 3);
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
 	(8, 6, 2, 5);
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
