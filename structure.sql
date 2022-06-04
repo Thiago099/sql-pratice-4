@@ -48,9 +48,9 @@ CREATE TABLE IF NOT EXISTS `object` (
   `name` varchar(64) DEFAULT NULL,
   `color` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela meaning.object: ~9 rows (aproximadamente)
+-- Copiando dados para a tabela meaning.object: ~7 rows (aproximadamente)
 /*!40000 ALTER TABLE `object` DISABLE KEYS */;
 INSERT INTO `object` (`id`, `name`, `color`) VALUES
 	(1, 'good', '#cfc');
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `object_correlation` (
   CONSTRAINT `FK_object_correlation_object_2` FOREIGN KEY (`id_object_to`) REFERENCES `object` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela meaning.object_correlation: ~8 rows (aproximadamente)
+-- Copiando dados para a tabela meaning.object_correlation: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `object_correlation` DISABLE KEYS */;
 INSERT INTO `object_correlation` (`id`, `id_object_from`, `id_object_to`, `id_correlation`) VALUES
 	(2, 5, 6, 2);
