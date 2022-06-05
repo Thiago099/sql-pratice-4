@@ -26,7 +26,7 @@ CREATE TABLE `correlation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -51,7 +51,7 @@ CREATE TABLE `object` (
   `name` varchar(64) DEFAULT NULL,
   `color` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -60,7 +60,7 @@ CREATE TABLE `object` (
 
 LOCK TABLES `object` WRITE;
 /*!40000 ALTER TABLE `object` DISABLE KEYS */;
-INSERT INTO `object` VALUES (1,'loop','#acf'),(2,'instruction','#acf'),(3,'litration rule','#ffc'),(6,'collection rule',NULL),(7,'range rule',NULL),(8,'iteration boundary','#cfc'),(9,'element',NULL),(10,'start',NULL),(11,'end',NULL),(13,'literable','#fcc'),(14,'collection',NULL),(15,'range',NULL),(17,'iteration','#cfc');
+INSERT INTO `object` VALUES (1,'loop','#acf'),(2,'instruction','#acf'),(3,'litration rule','#ffc'),(6,'collection rule',NULL),(7,'range rule',NULL),(8,'iteration boundary','#cfc'),(9,'element',NULL),(10,'start',NULL),(11,'end',NULL),(13,'literable','#fcc'),(14,'collection',NULL),(15,'range',NULL),(19,'iteration variable','#cfc');
 /*!40000 ALTER TABLE `object` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,7 +83,7 @@ CREATE TABLE `object_correlation` (
   CONSTRAINT `FK_object_correlation_correlation` FOREIGN KEY (`id_correlation`) REFERENCES `correlation` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_object_correlation_object` FOREIGN KEY (`id_object_from`) REFERENCES `object` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_object_correlation_object_2` FOREIGN KEY (`id_object_to`) REFERENCES `object` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -92,7 +92,7 @@ CREATE TABLE `object_correlation` (
 
 LOCK TABLES `object_correlation` WRITE;
 /*!40000 ALTER TABLE `object_correlation` DISABLE KEYS */;
-INSERT INTO `object_correlation` VALUES (1,2,1,2),(2,17,2,17),(7,3,6,2),(9,3,7,2),(10,8,9,2),(11,8,10,2),(12,8,11,2),(13,6,9,14),(14,7,10,12),(15,7,11,13),(16,17,3,16),(18,13,15,2),(19,13,14,2),(20,6,14,15),(21,7,15,15),(22,14,9,8),(23,15,11,8),(24,15,10,8),(25,1,13,8),(28,1,17,9);
+INSERT INTO `object_correlation` VALUES (1,2,1,2),(2,1,2,17),(7,3,6,2),(9,3,7,2),(10,8,9,2),(11,8,10,2),(12,8,11,2),(13,6,9,14),(14,7,10,12),(15,7,11,13),(16,1,3,16),(18,13,15,2),(19,13,14,2),(20,6,14,15),(21,7,15,15),(22,14,9,8),(23,15,11,8),(24,15,10,8),(25,1,13,8),(31,1,19,9),(33,19,3,14);
 /*!40000 ALTER TABLE `object_correlation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-05 20:43:40
+-- Dump completed on 2022-06-05 20:52:47
