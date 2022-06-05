@@ -1,3 +1,5 @@
+CREATE DATABASE meaning;
+USE meaning;
 -- meaning.correlation definition
 
 CREATE TABLE `correlation` (
