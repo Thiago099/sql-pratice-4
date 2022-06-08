@@ -60,7 +60,7 @@ CREATE TABLE `object` (
 
 LOCK TABLES `object` WRITE;
 /*!40000 ALTER TABLE `object` DISABLE KEYS */;
-INSERT INTO `object` VALUES (1,'for','#ACF'),(2,'instruction','#FFC'),(3,'literation rule','#FCC'),(4,'for data type','#FCF'),(5,'iteration range','#CFF'),(6,'array range',NULL),(7,'range range',NULL),(8,'element','#ACA'),(9,'number','#CAA'),(10,'array',NULL),(11,'range',NULL),(12,'array iteration rule','#ACC'),(13,'range iteration rule','#ACC'),(14,'iteration','#CFC'),(15,'repetition','#AAC');
+INSERT INTO `object` VALUES (1,'for','#ACF'),(2,'instruction','#FFC'),(3,'literation rule','#FCC'),(4,'iteration data type','#FCF'),(5,'iteration range','#CFF'),(6,'array range',NULL),(7,'range range',NULL),(8,'element','#ACA'),(9,'number','#CAA'),(10,'array',NULL),(11,'range',NULL),(12,'array iteration rule','#ACC'),(13,'range iteration rule','#ACC'),(14,'iteration','#CFC'),(15,'repetition','#AAC');
 /*!40000 ALTER TABLE `object` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,7 +92,7 @@ CREATE TABLE `object_correlation` (
 
 LOCK TABLES `object_correlation` WRITE;
 /*!40000 ALTER TABLE `object_correlation` DISABLE KEYS */;
-INSERT INTO `object_correlation` VALUES (1,1,2,20),(2,3,4,8),(3,3,5,9),(4,5,6,2),(5,5,7,2),(6,6,8,14),(7,7,9,12),(8,7,9,13),(9,4,10,2),(10,4,11,2),(11,3,12,22),(12,3,13,22),(13,12,10,15),(14,13,11,15),(15,12,6,9),(16,13,7,9),(17,1,3,21),(18,14,5,8),(19,1,14,21),(20,14,2,8),(21,14,15,21);
+INSERT INTO `object_correlation` VALUES (1,1,2,20),(2,3,4,18),(4,5,6,2),(5,5,7,2),(6,6,8,14),(7,7,9,12),(8,7,9,13),(9,4,10,2),(10,4,11,2),(11,3,12,22),(12,3,13,22),(13,12,10,15),(14,13,11,15),(15,12,6,9),(16,13,7,9),(17,1,3,21),(18,14,5,8),(19,1,14,21),(20,14,2,8),(21,14,15,21);
 /*!40000 ALTER TABLE `object_correlation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-08  7:44:34
+-- Dump completed on 2022-06-08 12:33:32
