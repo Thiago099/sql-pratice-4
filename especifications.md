@@ -14,3 +14,21 @@ the function takes parameters, a block of code and may return a value
 the operations take two values and return one 
 
 collection contains elements in a serial way
+
+
+
+
+______________________________________________________________________________
+
+
+start generic then progressively get more specific
+
+
+______________________________________________________________________________
+
+
+slow and fast thinker
+
+the slow tinker builds up knowledge
+
+the fast thinker does already known tasks
