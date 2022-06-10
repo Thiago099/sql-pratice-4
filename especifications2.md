@@ -20,3 +20,6 @@ function have block of code.
 function returns value.
 function can be called by passing the parameters it returns a result.
 calling the function will execute the code giving data from.
+
+
+code segmentation
