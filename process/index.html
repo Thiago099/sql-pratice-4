@@ -1,24 +1,48 @@
 <div class="centered-flex">
   <div class="card">
     <p>
-      <strong>logic</strong> - a combination of processes to achieve a <green>objective</green>
+      <strong>logic</strong> - The creation of a process achieve a <green>objective</green>
     </p>
     <p>
-      <strong>objective</strong> - a specific desired outcome
+      <strong>objective</strong> - Specific desired outcome
     </p>
     <p>
-        <strong>meaning</strong> - some <green>identity</green> that is analog to another <green>identity</green>
+      <strong>meaning</strong> - <green>Feature</green> that is analog to another <green>feature</green>
+    </p>
+    <p>
+      <strong>identity</strong> - One of the <green>features</green> that identifies a <green>entity</green>
+    </p>
+    <p>
+      <strong>feature</strong> - <green>Property</green> of a <green>entity</green>
+    </p>
+    <p>
+      <strong>process</strong> - <green>Sequence</green> of <green>actions</green>
+    </p>
+    <p>
+      <strong>action</strong> - transformation of <green>state</green>
     </p>
   </div>
 </div>
-
+<script>
+  const card = document.querySelector('.card')
+  const card_children = Array
+                          .prototype
+                          .slice
+                          .call(card.children)
+                          .sort((a, b) => a.innerHTML.localeCompare(b.innerHTML));
+  for (let i = 0; i < card_children.length; i++) {
+    card.appendChild(card_children[i])
+  }
+</script>
 <style>
 strong{
   color: rgb(0, 110, 255);
+  font-size:  25pt;
+  text-transform: capitalize;
 }
 .card{
   background-color: rgb(209, 208, 208);
-  border: 3px dashed rgb(0, 110, 255);
+  border: 3px dashed rgb(0, 0, 0);
   border-radius: 10px;
   padding: 10px;
   padding-left: 30px;
