@@ -83,7 +83,7 @@ CREATE TABLE `object_correlation` (
   CONSTRAINT `FK_object_correlation_correlation` FOREIGN KEY (`id_correlation`) REFERENCES `correlation` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_object_correlation_object` FOREIGN KEY (`id_object_from`) REFERENCES `object` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_object_correlation_object_2` FOREIGN KEY (`id_object_to`) REFERENCES `object` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -92,7 +92,7 @@ CREATE TABLE `object_correlation` (
 
 LOCK TABLES `object_correlation` WRITE;
 /*!40000 ALTER TABLE `object_correlation` DISABLE KEYS */;
-INSERT INTO `object_correlation` VALUES (1,3,1,20),(2,4,1,20),(3,3,1,17),(4,4,1,17),(5,3,2,28),(6,4,5,30),(7,5,2,6),(8,4,2,29);
+INSERT INTO `object_correlation` VALUES (1,3,1,20),(2,4,1,20),(3,3,1,17),(4,4,1,17),(5,3,2,28),(6,4,5,30),(7,5,2,6),(8,4,2,29),(9,5,2,20);
 /*!40000 ALTER TABLE `object_correlation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-19 16:37:47
+-- Dump completed on 2022-06-19 16:39:37
