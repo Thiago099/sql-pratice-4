@@ -51,6 +51,11 @@ while
 expression
 block
 
+function
+"the function once defined it can be called providing any parameters it require, and returns a value"
+block
+parameters
+return
 
 
 when the for is linked to the magic variable length it assumes another meaning
