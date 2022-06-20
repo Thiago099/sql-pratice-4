@@ -31,13 +31,13 @@ block
 
 
 foreach
-"executes block for each element in a collection and provides it to the block"
+"executes block for each element in a collection, and provides it to the block"
 collection
 iteration variable
 block
 
 for
-"given range it executes block for each number on it and provides it to the block"
+"given range it executes block for each number on it, and provides it to the block"
 start
 end
 step
