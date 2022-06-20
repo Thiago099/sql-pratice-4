@@ -1,4 +1,6 @@
-
+body{
+  background-color: rgb(122, 122, 122);
+}
 strong{
   color: rgb(0, 110, 255);
   font-size:  25pt;
@@ -15,7 +17,6 @@ strong{
     height: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
     border-radius: 10px;
   }
   ::-webkit-scrollbar-thumb {
@@ -62,4 +63,10 @@ strong{
 }
 green{
   color: rgb(35, 134, 52);
+}
+magenta{
+  color: rgb(255, 0, 255);
+}
+red{
+  color: rgb(255, 0, 0);
 }
