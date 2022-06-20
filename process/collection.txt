@@ -7,3 +7,26 @@ loop through the other elements of the collection
     if the current element is smaller than the smallest value
     
         set the smallest value to the current element
+
+
+
+
+variable
+get
+set
+
+collection -> variable
+length
+access element
+
+if
+"executes instruction if expression returns true"
+expression
+block
+
+
+foreach
+"executes instruction for each element in a collection"
+collection
+iteration variable
+block
