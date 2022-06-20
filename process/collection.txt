@@ -47,7 +47,7 @@ iteration variable
 block
 
 while
-"executes block until the expression returns true'
+"executes block until the expression returns true"
 expression
 block
 
