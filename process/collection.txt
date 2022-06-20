@@ -1,6 +1,6 @@
 find the smallest value in the collection
 
-smallest value starts at the first elements
+smallest value starts at the first element
     
 loop through the other elements of the collection
 
