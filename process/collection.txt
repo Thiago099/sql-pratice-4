@@ -35,6 +35,7 @@ for
 "given range it executes block for each number on it"
 start
 end
+step
 iteration variable
 
 
