@@ -17,10 +17,12 @@ expression
 "single variable or mathematical expressions that returns one value"
 
 variable
+"stores the value until it is set again"
 get
 set
 
 collection -> variable
+"sequential group of variables"
 length
 access element
 
