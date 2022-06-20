@@ -54,3 +54,4 @@ block
 
 
 when the for is linked to the magic variable length it assumes another meaning
+the parameters of a process alter its meaning
