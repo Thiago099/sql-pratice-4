@@ -20,13 +20,23 @@ length
 access element
 
 if
-"executes instruction if expression returns true"
+"executes block if expression returns true"
 expression
 block
 
 
 foreach
-"executes instruction for each element in a collection"
+"executes block for each element in a collection"
 collection
 iteration variable
 block
+
+for
+"given range it executes block for each number on it"
+start
+end
+iteration variable
+
+
+
+when the for is linked to the magic variable length it assumes another meaning
