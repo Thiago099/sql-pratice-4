@@ -31,17 +31,24 @@ block
 
 
 foreach
-"executes block for each element in a collection"
+"executes block for each element in a collection, and each time provides
+a iteration variable that is correspondent to the current element"
 collection
 iteration variable
 block
 
 for
-"given range it executes block for each number on it"
+"given range it executes block for each number on it, and each time provides
+a iteration variable that is correspondent to the current number"
 start
 end
 step
 iteration variable
+
+while
+"executes block until the expression returns true'
+expression
+block
 
 
 
