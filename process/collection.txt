@@ -1,0 +1,9 @@
+find the smallest value in the collection
+
+smallest value starts at the first elements
+    
+    loop through the other elements of the collection
+
+        if the current element is smaller than the smallest value
+        
+            set the smallest value to the current element
