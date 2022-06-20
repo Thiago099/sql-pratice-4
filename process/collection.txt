@@ -10,6 +10,11 @@ loop through the other elements of the collection
 
 
 
+block
+"group of sequential instructions"
+
+expression
+"single variable or mathematical expressions that returns one value"
 
 variable
 get
