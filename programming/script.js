@@ -3,7 +3,7 @@ const card_children = Array
 .prototype
 .slice
 .call(card.children)
-.sort((a, b) => a.getElementsByTagName('title')[0].innerHTML.localeCompare(b.getElementsByTagName('title')[0].innerHTML));
+.sort((a, b) => a.getElementsByTagName('title')[0].innerText.localeCompare(b.getElementsByTagName('title')[0].innerText));
 for (item of card_children) {
   card.appendChild(item)
 }
