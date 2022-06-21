@@ -71,3 +71,7 @@ magenta{
 red{
   color: rgb(210, 0, 0);
 }
+
+strong, green, magenta, red{
+  display: block;
+}
