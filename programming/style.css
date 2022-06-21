@@ -1,11 +1,7 @@
 body{
   background-color: rgb(122, 122, 122);
 }
-strong{
-  color: rgb(0, 110, 255);
-  font-size:  25pt;
-  text-transform: capitalize;
-}
+
 #content{
   margin-top: 3px;
   overflow-y: auto;
@@ -62,16 +58,22 @@ strong{
   border-bottom: 1px solid rgb(0, 0, 0);
   padding: 10px;
 }
+title{
+  font-weight: bold;
+  color: rgb(0, 110, 255);
+  font-size:  25pt;
+  text-transform: capitalize;
+}
 green{
   color: rgb(35, 134, 52);
 }
-magenta{
+cyan{
   color: rgb(0, 150, 150);
 }
 red{
   color: rgb(210, 0, 0);
 }
 
-strong, green, magenta, red{
+title, green, cyan, red{
   display: block;
 }
