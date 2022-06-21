@@ -8,6 +8,7 @@ body{
   padding: 10px;
   padding-left: 30px;
   height: calc(100% - 90px);
+  margin-right: 3px;
 }
 ::-webkit-scrollbar {
   width: 10px;
