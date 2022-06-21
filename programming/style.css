@@ -73,7 +73,10 @@ cyan{
 red{
   color: rgb(210, 0, 0);
 }
+purple{
+  color: rgb(150, 0, 150);
+}
 
-title, green, cyan, red{
+title, green, cyan, red, purple{
   display: block;
 }
